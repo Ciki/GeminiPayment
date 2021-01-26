@@ -18,7 +18,7 @@ class Utils
 			$accountPrefix = $numberParts[0];
 			$accountNumber = $numberParts[1];
 		} else {
-			$accountPrefix = null;
+			$accountPrefix = '';
 			$accountNumber = $accountParts[0];
 		}
 

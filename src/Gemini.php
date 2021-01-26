@@ -22,11 +22,17 @@ class Gemini
 	/** @var int one of self::TYPE_* consts */
 	private int $paymentType = self::TYPE_UHRADA;
 
+	/** @var string 4 numbers */
+	private string $senderBankCode;
+
+	/** @var string max 10 numbers */
+	private string $senderAccountNumber;
+
+	/** @var string max 6 numbers */
+	private string $senderAccountPrefix;
+
 	/** @var Item[] */
 	private array $items = [];
-	private string $senderBankCode;
-	private string $senderAccountNumber;
-	private ?string $senderAccountPrefix;
 
 
 	public function __construct(int $paymentType = self::TYPE_UHRADA, ?DateTimeInterface $date = null)
@@ -57,7 +63,7 @@ class Gemini
 	}
 
 
-	public function setSender(string $bankCode, string $accountNumber, ?string $accountPrefix = null): void
+	public function setSender(string $bankCode, string $accountNumber, string $accountPrefix = ''): void
 	{
 		$len = 4;
 		if (!is_numeric($bankCode) || strlen($bankCode) !== $len) {
@@ -93,7 +99,7 @@ class Gemini
 		$today = new DateTimeImmutable();
 
 //		$senderAccountName = str_pad($this->senderAccountName ?? '', 20, '0', STR_PAD_LEFT);
-		$senderAccountPrefix = str_pad((string) $this->senderAccountPrefix, 6, '0', STR_PAD_LEFT);
+		$senderAccountPrefix = str_pad($this->senderAccountPrefix, 6, '0', STR_PAD_LEFT);
 		$senderAccountNumber = str_pad($this->senderAccountNumber, 10, '0', STR_PAD_LEFT);
 		$senderBankCode = $this->senderBankCode;
 

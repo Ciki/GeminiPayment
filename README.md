@@ -1,5 +1,5 @@
 # Gemini generator for PHP
-	$senderAccountPrefix = null;
+	$senderAccountPrefix = '';
 	$senderAccountNumber = '1234567890';
 	$senderBankCode = '5500'; // 4 numbers
 
