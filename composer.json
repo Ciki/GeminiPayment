@@ -1,0 +1,22 @@
+{
+	"name": "Ciki/GeminiPayment",
+	"description": "PHP generator for Gemini payment file format.",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Ciki"
+		}
+	],
+	"minimum-stability": "stable",
+	"require": {
+		"nette/utils": "^3.0",
+		"php": ">=7.4.0"
+	},
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"Ciki\\GeminiPayment\\": ["src"]
+		}
+	}
+}
