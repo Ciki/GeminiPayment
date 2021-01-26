@@ -1,5 +1,5 @@
 {
-	"name": "Ciki/GeminiPayment",
+	"name": "ciki/gemini-payment",
 	"description": "PHP generator for Gemini payment file format.",
 	"type": "library",
 	"license": "MIT",
@@ -16,7 +16,7 @@
 	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
-			"Ciki\\GeminiPayment\\": ["src"]
+			"ciki\\gemini-payment\\": ["src"]
 		}
 	}
 }
