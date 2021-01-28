@@ -16,7 +16,7 @@
 	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
-			"ciki\\gemini-payment\\": ["src"]
+			"Ciki\\GeminiPayment\\": "src/"
 		}
 	}
 }
